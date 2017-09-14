@@ -2,10 +2,10 @@ body {
     font-family: Arial, sans-serif
 }
 
-wizards {
+#wizards {
     color: blue;
 }
 
-order {
+.order {
     background-color:green;
-    
+}
