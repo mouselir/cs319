@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+        
+        <script> 
+            
+            function convertftoc() {
+                
+                var fahrenheit;
+                var celsius;
+                
+                var fahrenheit = parseFloat(document.tempconverter.fahrenheit.value);
+                var celsius = parseFloat(document.tempconverter.celsius.value);
+                
+                var celsius = ((fahrenheit - 32) * (5/9));
+                
+                document.tempconverter.celsius.value = celsius;
+                document.tempconverter.celsius.style.backgroundColor = "green";
+                 }
+            
+            function convertctof() {
+                var fahrenheit;
+                var celsius;
+                
+                var fahrenheit = parseFloat(document.tempconverter.fahrenheit.value);
+                var celsius = parseFloat(document.tempconverter.celsius.value);
+                
+                var fahrenheit = (celsius * (9/5)) + 32;
+                
+                document.tempconverter.fahrenheit.value = fahrenheit;
+                document.tempconverter.fahrenheit.style.backgroundColor = "lightblue"; 
+            }
+            
+            
+            
+        </script>
+    
+        <form name="tempconverter" id="tempconverter" action="#" method="get">
+            
+              <p>Temperature in Fahrenheit: <input type="text" name="fahrenheit" id="fahrenheit"></p>
+            
+             <p><input type="button" name="fahtocel" id="fahtocel" value="F to C" onclick="convertftoc();"></p>
+            <p><input type="button" name="celtofah" id="celtofah" value="C to F" onclick="convertctof();"></p>
+            
+              <p>Temperature in Celsius: <input type="text" name="celsius" id="celsius"></p>
+            
+            
+            
+        </form>     
+    </body>
+</html>

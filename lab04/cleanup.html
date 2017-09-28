@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 04</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script> 
+            function showname() {
+                var first =
+                document.cleanup.firstname.value;
+                first = first.toUpperCase();
+                first = first.trim();
+                            
+                var second = document.cleanup.middleinitial.value;
+                second = second.toUpperCase();
+                second = second.trim();
+                
+                var third = document.cleanup.lastname.value;
+                third = third.toUpperCase();
+                third = third.trim();
+                
+                document.cleanup.fullname.value = first + " " + second + " " + third;
+            }
+        </script>
+    
+        <form name="cleanup" id="cleanup" action="#" method="get">
+              <p>First Name: <input type="text" name="firstname" id="firstname"></p>
+              <p>Middle Initial: <input type="text" name="middleinitial" id="middleinitial"></p>
+              <p>Last Name: <input type="text" name="lastname" id="lastname"></p>
+            
+            <p><input type="button" name="go" id="go" value="Submit!" onclick="showname();"></p>
+            
+              <p>Full Name: <input type="text" name="fullname" id="fullname"></p>
+            
+        </form>     
+    </body>
+</html>
