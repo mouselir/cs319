@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 05</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Months</h1>
+        <script> 
+            function check() {
+                var number 
+                
+                number = document.Months.number.value;
+               
+                if (number == 1) {
+                    alert ("January");
+                    document.getElementById("month").innerHTML = "January";
+                } else if (number == 2) {
+                    alert ("February");
+                    document.getElementById("month").innerHTML = "February";
+                } else if (number == "3") {
+                    alert ("March");
+                    document.getElementById("month").innerHTML = "March";
+                }  else if (number == "4") {
+                    alert ("April");
+                    document.getElementById("month").innerHTML = "April";
+                }  else if (number == "5") {
+                    alert ("May");
+                    document.getElementById("month").innerHTML = "May";
+                }  else if (number == "6") {
+                    alert ("June");
+                    document.getElementById("month").innerHTML = "June";
+                }  else if (number == "7") {
+                    alert ("July");
+                    document.getElementById("month").innerHTML = "July";
+                }  else if (number == "8") {
+                    alert ("August");
+                    document.getElementById("month").innerHTML = "August";
+                }  else if (number == "9") {
+                    alert ("September");
+                    document.getElementById("month").innerHTML = "September";
+                }  else if (number == "10") {
+                    alert ("October");
+                    document.getElementById("month").innerHTML = "October";
+                }  else if (number == "11") {
+                    alert ("November");
+                    document.getElementById("month").innerHTML = "November";
+                }  else if (number == "12") {
+                    alert ("December");
+                    document.getElementById("month").innerHTML = "December";
+                }  else {
+                    alert ("I don't think that number corresponds to a month.");
+                    document.Months.number.focus()
+                      } 
+            }
+        </script>
+        
+        
+        <form name="Months" id="madlib" action="#" method="get">
+              <p>Month Number: <input type="text" name="number" id="number"></p>
+            
+             <p><input type="button" name="go" id="go" value="Submit" onclick="check();"></p>
+            
+        </form>     
+        <p id="month"></p>
+    </body>
+</html>
