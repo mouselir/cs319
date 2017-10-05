@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 5</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Task 1</h1>
+        <script> 
+            function validate() {
+                
+                //alert ("test");
+                
+                var first; 
+                var last;
+                var email;
+
+                first = document.Info.firstname.value;
+                last = document.Info.lastname.value;
+                email = document.Info.emailaddress.value;
+
+                
+                if (first == "") {
+                    alert("Please fill in the First Name");
+                    document.Info.firstname.focus();
+                    return false;
+                } else if (last == "") {
+                    alert("Please fill in the Last Name");
+                    document.Info.lastname.focus();
+                    return false;
+                } else if (email == "") {
+                    alert ("Pleae fill in the Email Address");
+                    document.Info.emailaddress.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+                    
+                document.getElementById("information").innerHTML = first + " " + last + " email address is " + email;
+            }
+        </script>
+        
+        
+        <form name="Info" id="Info" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit = "return validate();">
+              <p>First Name: <input type="text" name="firstname" id="firstname"></p>
+              <p>Last Name: <input type="text" name="lastname" id="lastname"></p>
+              <p>Email Address: <input type="text" name="emailaddress" id="emailaddress"></p>    
+ 
+             <p><input type="submit" name="submit" id="submit" value="Show Info!"></p>
+            
+        </form>     
+            <p id="information"></p>
+    </body>
+</html>
