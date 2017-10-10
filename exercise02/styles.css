@@ -1,3 +1,9 @@
 th {
-    background-color:cadetblue
+    background-color:cadetblue;
+    color:ghostwhite;
 }
+
+tr:nth-child(even) {
+    background-color: bisque;
+}
+    

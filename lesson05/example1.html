@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lesson 05</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script> 
+            function check() {
+                var name;
+                var number;
+                var color;
+                var animal;
+                var story;
+                
+                name = document.MadLibs.name.value;
+                number = document.MadLibs.number.value;
+                color = document.MadLibs.color.value;
+                animal = document.MadLibs.animal.value;
+                
+                name = name.trim();
+                number = number.trim();
+                color = color.trim();
+                animal = animal.trim();
+                
+                if (name == "") {
+                    return false;
+                } else if (number == "") {
+                    return false;
+                } else if (color == "") {
+                    return false;
+                }  else if (animal == "") {
+                    return false;
+                }  else {
+                    return true;
+                      }
+                
+                
+                
+               story = "Hello, my name is " + name + "! I have " + number + " " + "wonderful " + color + " " + animal + "!";
+                
+                document.getElementById("story").innerHTML = story;
+            }
+        </script>
+        
+        
+        <form name="MadLibs" id="madlib" action="#" method="get">
+              <p>Name: <input type="text" name="name" id="name"></p>
+              <p>Number: <input type="text" name="number" id="number"></p>
+            
+            
+           <p><tr>
+                <th>Color:</th>
+            </tr>
+            <tr>
+                <td>
+                    <br><input type="radio" id ="color1" name="color" value="Black">Black<br>
+                     <input type="radio" id="color2" name="color" value="Brown">Brown<br>
+                    <input type="radio" id="color3" name="color" value="Pink">Pink<br>
+                </td>
+               </tr></p>
+            
+        
+            <p><tr>
+                <td>Animal (plural):</td>
+            </tr>
+            <tr>
+                <td>
+                <select name = "animal">
+                    <option id = "animal1" value="Rhinos">Rhinos</option>
+                    <option id = "animal2" value="Whales">Whales</option>
+                    <option id = "animal3" value="Wolves">Wolves</option>
+                </select>
+                </td>
+                </tr></p>
+            
+             <p><input type="button" name="go" id="go" value="Tell Story!" onclick="check();"></p>
+            
+        </form>     
+        <p id="story"></p>
+    </body>
+</html>
