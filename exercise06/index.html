@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 6</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script> 
+            function validate() {
+                var correctnumber;
+                var guessednumber
+                
+                correctnumbernumber = 3;
+                guessednumber = document.NumberGuess.guess.value;
+                guessednumber = guessednumber.trim();
+                
+                if (guessednumber == "") {
+                    alert("Please guess a number!");
+                    document.NumberGuess.guess.focus();
+                    return false;
+                } else if (isNaN(guessednumber) == true) {
+                    alert ("This guess should be a number!");
+                    document.NumberGuess.guess.focus();
+                    return false;
+                } else if (guessednumber > 10 || guessednumber < 1) {
+                    alert ("This guess is against the rules. The number is between 1 and 10. Try again!");
+                    document.NumberGuess.guess.focus();
+                    return false;
+                } else if (guessednumber > 3 && guessednumber <= 10) {
+                    alert ("This guess is too high. Guess a lower number!");
+                    document.NumberGuess.guess.focus();
+                    return false;
+                } else if (guessednumber < 3 && guessednumber >= 1) {
+                    alert ("This guess is too low. Guess a higher number!");
+                    document.NumberGuess.guess.focus();
+                    return false;
+                } else if (guessednumber == 3) {
+                    alert ("You guessed the correct number! It was 3!");
+                    document.NumberGuess.guess.focus();
+                    return true;
+                }
+                    
+                }
+        </script>
+        
+        <form name="NumberGuess" id="NumberGuess" action="#" method="get" onsubmit = "return validate();">
+        <p>What is your number guess? <input type="text" name="guess" id="guess"></p> 
+        <p><input type="submit" name="submit" id="submit" value="Show Guess!"></p>
+        
+        </form>
+    </body>
+</html>
