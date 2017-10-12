@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 6</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Task 1</h1>
+        <script> 
+            function validate() {
+                
+                //alert ("test");
+                
+                var first; 
+                var last;
+                var email;
+                var age;
+
+                first = document.Info.firstname.value;
+                last = document.Info.lastname.value;
+                email = document.Info.emailaddress.value;
+                age = document.Info.ageinyears.value;
+                
+                if (first == "") {
+                    alert("Please fill in the First Name!");
+                    document.Info.firstname.focus();
+                    return false;
+                } else if (last == "") {
+                    alert("Please fill in the Last Name!");
+                    document.Info.lastname.focus();
+                    return false;
+                } else if (email == "") {
+                    alert ("Pleae fill in the Email Address!");
+                    document.Info.emailaddress.focus();
+                    return false!");
+                } else if (email.endsWith("@uwec.edu")==false){
+                    alert ("Pleae fill in a UWEC email address!");
+                    document.Info.emailaddress.focus();
+                    return false;
+                } else if (age == "") {
+                    alert ("Pleae fill in the Age!");
+                    document.Info.ageinyears.focus();
+                    return false;
+                } else if (isNaN(age) == true) {
+                    alert ("The Age should only include numbers!");
+                    document.Info.ageinyears.focus();
+                    return false;
+                } else if (age < 18) {
+                    alert ("This Age is less than the required 18 years old!");
+                    document.Info.ageinyears.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+               
+        </script>
+        
+        
+        <form name="Info" id="Info" action="http://www.mattsias.com/echo.php" method="get" onsubmit = "return validate();">
+              <p>First Name: <input type="text" name="firstname" id="firstname"></p>
+              <p>Last Name: <input type="text" name="lastname" id="lastname"></p>
+              <p>Email Address: <input type="text" name="emailaddress" id="emailaddress"></p> 
+              <p>Age: <input type="text" name="ageinyears" id="ageinyears"></p>
+ 
+             <p><input type="submit" name="submit" id="submit" value="Show Info!"></p>
+            
+        </form>   
+    </body>
+</html>
