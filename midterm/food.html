@@ -18,8 +18,29 @@
                 var FirstFood =
                 document.getFood.ffood.value;
                   FirstFood=FirstFood.toLowerCase();
+                  FirstFood=FirstFood.trim();
                 var SecondFood = document.getFood.sfood.value;
                  SecondFood=SecondFood.toLowerCase();
+                 SecondFood=SecondFood.trim();
+                   
+                if (FirstFood == "") {
+                    alert("Please give your favorite food!");
+                    document.getFood.ffood.focus();
+                    return false;
+                } else if (isNaN(FirstFood) == false) {
+                    alert ("This food should not be a number!");
+                    document.getFood.ffood.focus(); 
+                    return false;
+                } else if (SecondFood == "") {
+                    alert("Please give your favorite food!");
+                    document.getFood.sfood.focus();
+                    return false;
+                } else if (isNaN(SecondFood) == false) {
+                    alert ("This food should not be a number!");
+                    document.getFood.sfood.focus(); 
+                    return false;
+                } 
+                    
                    
                 alert("Your favorite foods are: " + FirstFood + " and " + SecondFood + ".");
             }

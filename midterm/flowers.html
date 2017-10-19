@@ -16,21 +16,28 @@
 
              function whichRadio() {
       
+               var WhichFlower = document.flowers.flowerType.value;  
+                 
         if (document.flowers.daisy.checked == true) {
                 alert("Daisy has been checked!");
+             document.getElementById("flowersid").innerHTML = 
+                WhichFlower + " has been checked!";
                     return false;
                 }   else if
                 (document.flowers.orchid.checked == true) {
                     alert("Orchid has been checked!");
+                    document.getElementById("flowersid").innerHTML = 
+                WhichFlower + " has been checked!";
                     return false;
                 }   else if
                 (document.flowers.peony.checked == true) {
                     alert("Peony has been checked!");
+                    document.getElementById("flowersid").innerHTML = 
+                WhichFlower + " has been checked!";
                     return false;
-                }   else {
-                    return true;
+        
                 }
-                    
+                
                 }
 
         </script>
@@ -46,7 +53,7 @@
             <p><input type="button" name="checkRadio" id="checkRadio" value="Which Flower?" onclick="whichRadio();"></p>
 
         </form>
-
+        <p id="flowersid"></p>
     </body>
 
 </html>
